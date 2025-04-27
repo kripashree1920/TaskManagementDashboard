@@ -26,7 +26,7 @@ const KanbanBoard = () => {
       const resp = await fetch(API_URL);
       const data = await resp.json();
       
-      const listOfMappedTask = data.slice(0, 12).map(task => ({
+      const listOfMappedTask = data.slice(0, 10).map(task => ({
         ...task,
         status: task.status || (task.completed ? 'Done' : 'To Do')
       }));
