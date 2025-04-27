@@ -1,0 +1,46 @@
+{
+  "tasks": [
+    {
+      "title": "Finish Assignment",
+      "description": "Complete the final draft of the project report, by the deadline",
+      "userId": 1,
+      "completed": false,
+      "id": "1"
+    },
+    {
+      "title": "Prepare for Interview",
+      "description": "Revise all topics",
+      "userId": 1,
+      "completed": false,
+      "id": "2"
+    },
+    {
+      "title": "Submit Project",
+      "description": "Working Project with all Features",
+      "userId": 2,
+      "completed": true,
+      "id": "3"
+    },
+    {
+      "title": "Learn React",
+      "description": "Study React basics and apply to a small project",
+      "userId": 2,
+      "completed": false,
+      "id": "4"
+    },
+    {
+      "title": "Create Task Mangement APP",
+      "description": "client-side React application designed as a Kanban board",
+      "userId": 1,
+      "completed": false,
+      "id": "5"
+    },
+    {
+      "title": "Design App Logo",
+      "description": "Create a logo for the task management app",
+      "userId": 2,
+      "completed": false,
+      "id": "9689"
+    }
+  ]
+}

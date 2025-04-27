@@ -1,0 +1,242 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: radial-gradient(circle, #4B0082, #D8BFD8);
+  margin: 0;
+  padding: 20px;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.kanban-board {
+  padding: 20px;
+  background: transparent;
+}
+
+.kanban-board h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.add-task-btn {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 12px 24px;
+  background-color: #450573;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-task-btn:hover {
+  background-color: #e8c8ff;
+  color: #450573;
+  transform: scale(1.05);
+}
+
+.columns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  min-width: 250px;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  background-color: var(--bg-color, #fff); 
+}
+
+.column:hover {
+  transform: translateY(-5px);
+}
+
+.column-to-do {
+  background-color: #eeb9bf; 
+  
+  color: #c82333; 
+}
+
+.column-in-progress {
+  background-color: #FFDEAD; 
+  color: #8B0000; 
+}
+
+.column-done {
+  background-color: #7dd7a7;
+  
+  color: #218838; 
+}
+
+.column-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  
+}
+
+.task-list {
+  min-height: 100px;
+}
+
+.task-card {
+  background-color: #FFFFFF; 
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 12px;
+  cursor: grab;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.task-card h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.task-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.form-actions button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.form-actions button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+}
+
+.form-actions button[type="submit"]:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.form-actions button[type="button"] {
+  background-color: #dc3545;
+  color: white;
+}
+
+.form-actions button[type="button"]:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+  }
+
+  .column {
+    min-width: 100%;
+  }
+
+  .kanban-board h1 {
+    font-size: 1.5rem;
+  }
+
+  .add-task-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
