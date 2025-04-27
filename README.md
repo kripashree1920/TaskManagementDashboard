@@ -39,7 +39,11 @@ npm install -g json-server
 - Start json-server:Place the db.json file in the project root and run:
 - json-server --watch db.json --port 3001
 
----
+## Hoisting
+- hoisted the code in NETLIFY platform
+- API end point used : https://jsonplaceholder.typicode.com/todos
+
+
 
 ## Running the Project Locally
 
