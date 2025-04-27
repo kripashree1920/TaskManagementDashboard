@@ -3,7 +3,8 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import Column from './Column';
 import NewTaskForm from './NewTaskForm';
 
-const API_URL = 'http://localhost:3001/tasks';
+// const API_URL = 'http://localhost:3001/tasks';
+const API_URL = 'https://jsonplaceholder.typicode.com/todos';
 
 const KanbanBoard = () => {
   const [tasks, setTasks] = useState([]);
@@ -25,7 +26,7 @@ const KanbanBoard = () => {
       const resp = await fetch(API_URL);
       const data = await resp.json();
       
-      const listOfMappedTask = data.map(task => ({
+      const listOfMappedTask = data.slice(0, 12).map(task => ({
         ...task,
         status: task.status || (task.completed ? 'Done' : 'To Do')
       }));
